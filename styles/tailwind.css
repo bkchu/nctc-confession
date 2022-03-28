@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Publico;
+  src: url("./fonts/publico/Publico-Roman.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Publico;
+  src: url("./fonts/publico/Publico-Italic.otf");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Publico;
+  src: url("./fonts/publico/Publico-Bold.otf");
+  font-style: italic;
+  font-weight: bold;
+}
+
+html {
+  @apply bg-nctcWhite-100;
+}
+
+.underlined {
+  position: relative;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.underlined:hover:after {
+  background-color: currentColor;
+  transform: scaleX(1);
+}
+
+.underlined:after {
+  content: "";
+  height: 2px;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  transform-origin: left;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  display: block;
+  position: absolute;
+}
